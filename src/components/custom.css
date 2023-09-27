@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Sen:wght@500;600;700&display=swap');
+
+.home {
+  font-family: 'Sen', sans-serif;
+}
+
+.container-fluid {
+  background: black;
+  color: white;
+}
+
+.navbar {
+  font-family: 'Sen', sans-serif;
+  background: rgba(88, 88, 88, 0.1);
+}
+
+.nav-item {
+  padding: 5px;
+}
+
+.nav-link:hover {
+  color: #dd7732;
+}
+
+svg {
+  position: absolute;
+}
+
+.home_hero_section {
+  position: static;
+  height: 90vh;
+  max-height: 1080px;
+  padding-right: 40px;
+}
+
+@media screen and (max-width: 991px)
+{
+  .home_hero_section {
+      padding-right: 32px;
+  }
+}
+
+@media screen and (max-width: 767px)
+{
+  .home_hero_section {
+      height: auto;
+      padding-right: 0px;
+  }
+}
+
+  
+
+.home_wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.home_wrapper.home_section_wrapper_grid {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 767px)
+{.home_wrapper.home_section_wrapper_grid {
+    grid-row-gap: 0px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+}}
+
+
+.home_hero_image_box {
+  height: 80vh;
+  max-height: 864px;
+  background-image: url(https://source.unsplash.com/random);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {.home_hero_image_box {
+  height: 45vh;
+  /* width: 100vw; */
+}}
+
+#home_hero_image_h12 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+#home_hero_section_name {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+}
+
+
+.home_hero_section_title_block {
+  margin-left: -64px;
+}
+
+@media screen and (max-width: 767px)
+{.home_hero_section_title_block {
+    margin-left: 0px;
+    /* padding: 48px 20px; */
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(#181823), to(#181823)); */
+    /* background-image: linear-gradient(180deg, #181823, #181823); */
+}}
+
+.home_heading_title {
+  margin-top: 0px;
+  margin-bottom: 32px;
+  color: #fff;
+  font-size: 76px;
+  line-height: 110%;
+}
