@@ -5,13 +5,15 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
+import UnderConstruction from './components/UnderConstruction';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' index element={<Home />}></Route>
+          <Route path='/home' element={<Home />}></Route>
+          <Route path='/' index element={<UnderConstruction />}></Route>
           <Route path='/experience' index element={<Experience />}></Route>
           <Route path='/projects' index element={<Projects />}></Route>
           <Route path='/certifications' index element={<Certifications />}></Route>

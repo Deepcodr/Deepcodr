@@ -2,10 +2,9 @@ import React, { useEffect } from 'react';
 import './custom.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link, useNavigate } from 'react-router-dom';
-import { TypeAnimation } from 'react-type-animation';
 import $ from 'jquery';
 
-export default function Home() {
+export default function UnderConstruction() {
     return (
         <div className="home container-fluid p-0 min-vh-100">
             <nav className="navbar navbar-expand-lg navbar-dark">
@@ -20,16 +19,16 @@ export default function Home() {
                             <Link className='nav-link' to="/">Home</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className='nav-link' to="/experience">Experience</Link>
+                            <Link className='nav-link' to="/">Experience</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className='nav-link' to="/projects">Projects</Link>
+                            <Link className='nav-link' to="/">Projects</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className='nav-link' to="/certifications">Certifications</Link>
+                            <Link className='nav-link' to="/">Certifications</Link>
                         </li>
                         <li className="nav-item active">
-                            <Link className='nav-link' to="/contact">Contact</Link>
+                            <Link className='nav-link' to="/">Contact</Link>
                         </li>
                     </ul>
                 </div>
@@ -38,23 +37,9 @@ export default function Home() {
                 <div className='home_wrapper home_section_wrapper_grid'>
                     <div id='home_hero_image_h12' className='home_hero_image_box' style={{ "transform": "translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", "transformStyle": "preserve-3d", "opacity": "1" }}></div>
                     <div id='home_hero_section_name' className='home_hero_section_title_block'>
-                        <p className='display-1 home_heading_title text-center' style={{ "transform": "translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", "transformStyle": "preserve-3d", "opacity": "1" }}>I'm Deepak Patil<br></br>
-                            <TypeAnimation
-                                sequence={[
-                                    "Passionate",
-                                    5000,
-                                    "Aspiring",
-                                    5000,
-                                    "Curious",
-                                    5000,
-                                    "Ambitious",
-                                    5000
-                                ]}
-                                speed={300}
-                                repeat={Infinity}
-                                style={{ color: '#dd7732' }}
-                            /><br></br>
-                            Computer Engineer</p>
+                        <p className='display-1 home_heading_title text-center' style={{ "transform": "translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", "transformStyle": "preserve-3d", "opacity": "1" }}>
+                            Under Construction<br></br>Coming Soon ......
+                        </p>
                     </div>
                 </div>
             </div>
