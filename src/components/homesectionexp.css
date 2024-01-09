@@ -1,0 +1,171 @@
+/* *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    appearance: none;
+    border-style: none;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+/* h1, h2, h3, span, p {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+} */
+/* html, .home {
+    width: 100%;
+    height: 100%;
+    background: #161623;
+} */
+.home {
+    /* position: relative; */
+    /* overflow: hidden; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* height: 100%; */
+    /* width: 100%; */
+}
+
+.home_hero_section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(180deg,#f3d621, #ff0000);
+    /* background-image: linear-gradient( #ff4d4d, #f9cb28); */
+    /* background-image: linear-gradient( #007cf0, #00dfd8); */
+    clip-path: circle(27% at right 60%);
+}
+
+
+.home_hero_section::after {
+    content: '';
+    position: absolute;
+    /* position: relative; */
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(#f3d621, #ff0000); */
+    background-image: linear-gradient(90deg, #7928ca, #ff0080);
+    /* background: linear-gradient(rgb(0, 0, 0), rgb(226, 12, 101)); */
+    clip-path: circle(20% at 10% 10%);
+} 
+
+.home .experience_container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.home .experience_container .exp_card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 1em;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(40px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+    box-shadow: 0px 10px 10px rgba(46, 54, 68, 0.03);
+}
+.home .experience_container .exp_card .content {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.home .experience_container .exp_card .content .img {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(0, 0, 0, .25);
+}
+.home .experience_container .exp_card .content .img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home .experience_container .exp_card .content .cardContent h3 {
+    color: #fff;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+}
+.home .experience_container .exp_card .content .cardContent h3 span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: initial;
+}
+.home .experience_container .exp_card .sci {
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.home .experience_container .exp_card .sci li {
+    margin: 0 10px;
+    transform: translateY(40px);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+}
+.home .experience_container .exp_card .sci li a {
+    font-size: 24px;
+}
+/* .home .experience_container .exp_card:hover .content {
+    opacity: 1;
+    transform: translateY(-20px);
+} */
+
+.home .experience_container .exp_card:hover .sci li {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.home_experience_head{
+    font-weight: bold;
+}
+
+.home_experience_sub{
+    font-weight: bold;
+}
+
+.skill_svg{
+    display: inline-block;
+    position: absolute;
+    margin-bottom: 24px;
+}

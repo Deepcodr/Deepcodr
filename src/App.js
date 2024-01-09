@@ -6,18 +6,20 @@ import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import UnderConstruction from './components/UnderConstruction';
+import NotFound from './components/404';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/home' element={<Home />}></Route>
-          <Route path='/' index element={<UnderConstruction />}></Route>
-          <Route path='/experience' index element={<Experience />}></Route>
-          <Route path='/projects' index element={<Projects />}></Route>
-          <Route path='/certifications' index element={<Certifications />}></Route>
-          <Route path='/contact' index element={<Contact />}></Route>
+          <Route path='/' index element={<Home />}></Route>
+          <Route path='/experience' element={<Experience />}></Route>
+          <Route path='*'  element={<UnderConstruction />}></Route>
+          {/* <Route path='/projects'  element={<Projects />}></Route> */}
+          {/* <Route path='/certifications' element={<Certifications />}></Route> */}
+          {/* <Route path='/contact' element={<Contact />}></Route> */}
+          {/* <Route path='*' element={<NotFound />}></Route> */}
         </Routes>
       </BrowserRouter>
     </div>

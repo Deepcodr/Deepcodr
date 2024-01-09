@@ -17,7 +17,7 @@
     color: #dd7732;
 }
 
-.hero_texts_project{
+.hero_texts_project {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,3 +218,254 @@
 }
 
 /* *, *::before, *::after { box-sizing:border-box } */
+
+/* :root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --outline-width: 0px;
+} */
+
+/* #cards {
+    padding-bottom: calc(4 * 1em);
+    margin-bottom: 4vw;
+}
+
+#card_1 {
+    --index: 1;
+}
+
+#card_2 {
+    --index: 2;
+}
+
+#card_3 {
+    --index: 3;
+}
+
+#card_4 {
+    --index: 4;
+}
+
+.project-card {
+    position: sticky;
+    top: 0;
+    padding-top: calc(var(--index) * 1em);
+}
+
+.card__content {
+    transform-origin: 50% 0%;
+    will-change: transform;
+} */
+
+/** PAGE STYLING **/
+
+/* main * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+/* body {
+	background: rgb(58 29 43);
+	color: rgb(255, 255, 255);
+
+	font-size: calc(1em + 0.5vw);
+} */
+
+/* main {
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cards {
+    list-style: none;
+    outline: calc(0px * 10) solid hotpink;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 40vw);
+    gap: var(--card-margin);
+}
+
+.project-card {
+    outline: 0px solid lime;
+}
+
+.card__content {
+    box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+    background: rgb(17, 16, 17);
+    color: rgb(255, 255, 255);
+    border-radius: 1em;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: "text iframe";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    align-items: stretch;
+    outline: 0px solid blue;
+}
+
+.card__content>div {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+
+    display: grid;
+    gap: 1em;
+    place-items: start;
+}
+
+.card__content>figure {
+    grid-area: iframe;
+    overflow: hidden;
+}
+
+.project-preview {
+    background-image: url('https://deepcodr.vercel.app');
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+}
+
+main h1 {
+    font-weight: 300;
+    font-size: 3.5em;
+}
+
+main h2 {
+    font-weight: 300;
+    font-size: 2.5em;
+}
+
+main p {
+    font-family: sans-serif;
+    font-weight: 300;
+    line-height: 1.42;
+}
+
+main .btn {
+    background: rgb(188 87 36);
+    color: rgb(255 255 255);
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+}
+
+aside {
+    width: 50vw;
+    margin: 0 auto;
+    text-align: left;
+}
+
+aside p {
+    margin-bottom: 1em;
+} */
+
+/* Position warning box */
+/* .warning {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: max-content;
+    text-align: center;
+    max-width: 90vw;
+    margin: auto;
+    z-index: 2;
+    font-size: 0.8em;
+    color: #333;
+} */
+
+.footer {
+    color: white;
+}
+
+/* body{
+    position : absolute;
+    height: 120vh;
+    display: block;
+} */
+
+/* parallax scrolling */
+.project-wrapper {
+    /* display: block; */
+    position: absolute;
+    height: 100%;
+    /* margin: 0; */
+    font: 400 15px/1.8 "Sen", sans-serif;
+    color: #777;
+}
+
+/* #iframe {
+    position: relative;
+    float: left;
+    clear: both;
+    width: 100%;
+    height: inherit;
+    z-index: 0;
+    left: no-repeat;
+    overflow-y: hidden;
+    pointer-events: none;
+    background-clip: content-box;
+} */
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    opacity: 0.65;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.bgimg-1 {
+    background-image: url("https://source.unsplash.com/random/?cars");
+    /* background-image: element("iframe"); */
+    min-height: 100%;
+}
+
+.bgimg-2 {
+    background-image: url("https://source.unsplash.com/random/?Coding");
+    min-height: 400px;
+}
+
+.bgimg-3 {
+    background-image: url("https://source.unsplash.com/random/?Abstract");
+    min-height: 400px;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
