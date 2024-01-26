@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-// import nodejslogo from './nodejs.png'
-import './custom.css';
-import './homesectionskills.css';
-import './homesectionexp.css';
+import React from 'react';
+import '../css/custom.css';
+import '../css/homesectionskills.css';
+import '../css/homesectionexp.css';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Footer from './Footer.js';
+import Navbar from './Navbar.js';
 
 export default function Home() {
     const { scrollYProgress } = useScroll()
@@ -16,58 +16,15 @@ export default function Home() {
         restDelta: 0.001
     });
 
-    useEffect(() => {
-        document.querySelector(".day-night input").addEventListener("change", () => {
-            document.querySelector("body").classList.add("toggle");
-            setTimeout(() => {
-                document.querySelector("body").classList.toggle("light");
-
-                setTimeout(
-                    () => document.querySelector("body").classList.remove("toggle"),
-                    10
-                );
-            }, 5);
-        });
-    }, []);
-
     return (
         <>
             <div className="home container-fluid p-0 min-vh-100">
-                <motion.path
-                    className='progress-bar'
-                    d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
-                    style={{ scaleX }}
-                />
-                <nav className="navbar navbar-expand-lg navbar-dark">
-                    <Link to="/" className='navbar-brand p-3'>Deepcodr</Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active">
-                                <Link className='nav-link' to="/">Home</Link>
-                            </li>
-                            <li className="nav-item active">
-                                <Link className='nav-link' to="/experience">Experience</Link>
-                            </li>
-                            <li className="nav-item active">
-                                <Link className='nav-link' to="/projects">Projects</Link>
-                            </li>
-                            <li className="nav-item active">
-                                <Link className='nav-link' to="/certifications">Certifications</Link>
-                            </li>
-                            <li className="nav-item active">
-                                <Link className='nav-link' to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                        <label className="day-night">
-                            <input type="checkbox" defaultChecked />
-                            <div></div>
-                        </label>
-                    </div>
-                </nav>
+            <motion.path
+                className='progress-bar'
+                d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+                style={{ scaleX }}
+            />
+                < Navbar />
                 <div className='home_hero_section'>
                     {/* <div className='home_wrapper home_section_wrapper_grid'> */}
                     {/* <div id='home_hero_image_h12' className='home_hero_image_box' style={{ "transform": "translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)", "transformStyle": "preserve-3d", "opacity": "1" }}></div> */}
@@ -115,22 +72,11 @@ export default function Home() {
                             }}
                             className="exp_card">
                             <div className="content">
-                                <div className="img"><img src="/tcs_logo.webp"></img></div>
+                                <div className="img"><img src="/tcs_logo.webp" alt='tcslogo'></img></div>
                                 <div className="cardContent">
                                     <h3>Tata Consultancy Services*<br></br><span>Systems Engineer</span></h3>
                                 </div>
                             </div>
-                            {/* <ul className="sci">
-                                <li style={{"--i":1}}>
-                                    <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li style={{"--i":2}}>
-                                    <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-                                </li>
-                                <li style={{"--i":3}}>
-                                    <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
-                                </li>
-                            </ul> */}
                         </motion.div>
                         <motion.div
                             whileInView={{
@@ -142,22 +88,11 @@ export default function Home() {
                             }}
                             className="exp_card">
                             <div className="content">
-                                <div className="img"><img src="/galaxy_logo.svg"></img></div>
+                                <div className="img"><img src="/galaxy_logo.svg" alt='galaxylogo'></img></div>
                                 <div className="cardContent">
                                     <h3>Galaxy Surfactants Ltd.<br></br><span>React Native Developer</span></h3>
                                 </div>
                             </div>
-                            {/* <ul className="sci">
-                                <li style={{"--i":1}}>
-                                    <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li style={{"--i":2}}>
-                                    <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-                                </li>
-                                <li style={{"--i":3}}>
-                                    <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
-                                </li>
-                            </ul> */}
                         </motion.div>
                         <motion.div
                             whileInView={{
@@ -169,22 +104,10 @@ export default function Home() {
                             }}
                             className="exp_card">
                             <div className="content">
-                                {/* <div className="img"><img src="https://unsplash.it/200/201"></img></div> */}
                                 <div className="cardContent">
                                     <h3><Link className='nav-link text-light' to="/experience">View More</Link></h3>
                                 </div>
                             </div>
-                            {/* <ul className="sci">
-                                <li style={{"--i":1}}>
-                                    <a href="#"><i className="fa fa-facebook" aria-hidden="true"></i></a>
-                                </li>
-                                <li style={{"--i":2}}>
-                                    <a href="#"><i className="fa fa-instagram" aria-hidden="true"></i></a>
-                                </li>
-                                <li style={{"--i":3}}>
-                                    <a href="#"><i className="fa fa-github" aria-hidden="true"></i></a>
-                                </li>
-                            </ul> */}
                         </motion.div>
                     </div>
                 </div>
@@ -501,6 +424,33 @@ export default function Home() {
                                         <div className="line line-3"></div>
                                     </div>
                                 </div>
+                                <div className="skill_card m-2">
+                                    <span className="skill_icon">
+                                        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Spring Boot</title><path d="m23.693 10.7058-4.73-8.1844c-.4094-.7106-1.4166-1.2942-2.2402-1.2942H7.2725c-.819 0-1.8308.5836-2.2402 1.2942L.307 10.7058c-.4095.7106-.4095 1.873 0 2.5837l4.7252 8.189c.4094.7107 1.4166 1.2943 2.2402 1.2943h9.455c.819 0 1.826-.5836 2.2402-1.2942l4.7252-8.189c.4095-.7107.4095-1.8732 0-2.5838zM10.9763 5.7547c0-.5365.4377-.9742.9742-.9742s.9742.4377.9742.9742v5.8217c0 .5366-.4377.9742-.9742.9742s-.9742-.4376-.9742-.9742zm.9742 12.4294c-3.6427 0-6.6077-2.965-6.6077-6.6077.0047-2.0896.993-4.0521 2.6685-5.304a.8657.8657 0 0 1 1.2142.1788.8657.8657 0 0 1-.1788 1.2143c-2.1602 1.6048-2.612 4.6592-1.0072 6.8194 1.6049 2.1603 4.6593 2.612 6.8195 1.0072 1.2378-.9177 1.9673-2.372 1.9673-3.9157a4.8972 4.8972 0 0 0-1.9861-3.925c-.386-.2824-.466-.8284-.1836-1.2143.2824-.386.8283-.466 1.2143-.1835 1.6895 1.2471 2.6826 3.2238 2.6873 5.3228 0 3.6474-2.965 6.6077-6.6077 6.6077z"></path></svg>
+                                        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><title>Python</title><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z" /></svg> */}
+                                    </span>
+                                    <div className="skill_shine"></div>
+                                    <div className="skill_background">
+                                        <div className="skill_tiles">
+                                            <div className="skill_tile skill_tile-1"></div>
+                                            <div className="skill_tile skill_tile-2"></div>
+                                            <div className="skill_tile skill_tile-3"></div>
+                                            <div className="skill_tile skill_tile-4"></div>
+
+                                            <div className="skill_tile skill_tile-5"></div>
+                                            <div className="skill_tile skill_tile-6"></div>
+                                            <div className="skill_tile skill_tile-7"></div>
+                                            <div className="skill_tile skill_tile-8"></div>
+
+                                            <div className="skill_tile skill_tile-9"></div>
+                                            <div className="skill_tile skill_tile-10"></div>
+                                        </div>
+
+                                        <div className="line line-1"></div>
+                                        <div className="line line-2"></div>
+                                        <div className="line line-3"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -594,17 +544,11 @@ export default function Home() {
                                     </div>
                                 </motion.div>
                                 <div className='m-4 text-center'>
-                                    <h1 className='home_experience_sub text-muted'>To Be Continued...</h1>
+                                    <h1 className='home_experience_sub text-muted'> </h1>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='m-2 my-5 p-2'>
-                    <blockquote class="q-card q-card-color-2">
-                        <div class="content display-4">Everybody Should Learn To Code A Computer Because It Teaches You How To Think.</div>
-                        <div class='author text-light'><h7>Steve Jobs</h7></div>
-                    </blockquote>
                 </div>
                 <div className='my-3'>
                     <div className='p-5'>
@@ -616,29 +560,16 @@ export default function Home() {
                             <button className='btn btn-lg border border-light text-light rounded-0 my-auto mx-auto'>Connect Now</button>
                         </div>
                     </div>
-                    {/* <div className='col-sm-6 '>
-                            <div className='forms-grid my-2'>
-                                <div className='p-2'>
-                                    <label className='m-2 home_experience_sub'><h5>Name</h5></label>
-                                    <input className='m-2 form-control bg-dark border border-dark rounded-0' type='text'></input>
-                                </div>
-                                <div className='p-2'>
-                                    <label className='m-2 home_experience_sub'><h5>Email</h5></label>
-                                    <input className='m-2 form-control bg-dark border border-dark rounded-0' type='email'></input>
-                                </div>
-                                <div className='p-2'>
-                                    <label className='m-2 home_experience_sub'><h5>Phone</h5></label>
-                                    <input className='m-2 form-control bg-dark border border-dark rounded-0' type='number'></input>
-                                </div>
-                                <div className='m-2'>
-                                    <label className='m-2 home_experience_sub'><h5>Message To Me</h5></label>
-                                    <textarea className='m-2 form-control bg-dark border border-dark rounded-0'></textarea>
-                                </div>
-                            </div>
-                        </div> */}
                 </div>
-                <Footer />
+                <div className='container-fluid m-2 my-5 p-2'>
+                    <blockquote class="q-card q-card-color-2">
+                        <div class="content display-4">Everybody Should Learn To Code A Computer Because It Teaches You How To Think.</div>
+                        <div class='author text-light'><h7>Steve Jobs</h7></div>
+                    </blockquote>
+                </div>
+
             </div >
+            <Footer />
         </>
     )
 }

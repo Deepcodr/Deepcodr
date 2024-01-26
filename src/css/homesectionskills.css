@@ -65,6 +65,7 @@ body.light {
 body.toggle .skill_grid * {
     transition-duration: 0s !important;
 }
+
 .skill_grid {
     display: flex;
     /* display: grid; */
@@ -255,6 +256,7 @@ body.toggle .skill_grid * {
         opacity: 0;
    }
 }
+
 .skill_card .skill_background .line {
     position: absolute;
     inset: 0;
@@ -346,6 +348,7 @@ body.toggle .skill_grid * {
 .skill_card:hover .skill_background .line.line-3:before, .skill_card:hover .skill_background .line.line-3:after {
     transition-delay: 0.3s;
 }
+
 .day-night {
     cursor: pointer;
     position: absolute;
@@ -353,9 +356,11 @@ body.toggle .skill_grid * {
     top: 20px;
     opacity: 0.3;
 }
+
 .day-night input {
     display: none;
 }
+
 .day-night input + div {
     border-radius: 50%;
     width: 20px;
@@ -365,6 +370,7 @@ body.toggle .skill_grid * {
     transform: scale(1) rotate(-2deg);
     transition: box-shadow 0.5s ease 0s, transform 0.4s ease 0.1s;
 }
+
 .day-night input + div:before {
     content: '';
     width: inherit;
@@ -375,6 +381,7 @@ body.toggle .skill_grid * {
     top: 0;
     transition: background-color 0.3s ease;
 }
+
 .day-night input + div:after {
     content: '';
     width: 6px;
@@ -388,19 +395,23 @@ body.toggle .skill_grid * {
     transform: scale(0);
     transition: all 0.3s ease;
 }
+
 .day-night input:checked + div {
     box-shadow: inset 20px -20px 0 0 var(--text-color);
     transform: scale(0.5) rotate(0deg);
     transition: transform 0.3s ease 0.1s, box-shadow 0.2s ease 0s;
 }
+
 .day-night input:checked + div:before {
     background: var(--text-color);
     transition: background-color 0.3s ease 0.1s;
 }
+
 .day-night input:checked + div:after {
     transform: scale(1);
     transition: transform 0.5s ease 0.15s;
 }
+
 html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -421,14 +432,6 @@ html {
     /* background-color: var(--background-color); */
     /* overflow: hidden; */
 }
-
-/* .home_skills:before {
-    content: '';
-    position: absolute;
-    inset: 0 -60% 65% -60%;
-    background-image: radial-gradient(ellipse at top, #10b981 0%, var(--background-color) 50%);
-    opacity: var(--blur-opacity);
-} */
 
 .skillset{
     /* position: absolute; */

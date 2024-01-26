@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&family=Sen:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@800&display=swap');
+
+.home {
+  font-family: 'Sen', sans-serif;
+  overflow-x: hidden
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #dd7732;
+  /* transform-origin: 0%; */
+  z-index: 2;
+  float: inline-start;
+}
+
+.home_hero_section {
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 64px);
+  max-height: 1080px;
+}
+
+@media screen and (max-width: 991px) {
+  .home_hero_section {
+    /* height: 20vh; */
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home_hero_section {
+    /* height: 20vh; */
+    padding-right: 0px;
+  }
+}
+
+.home_heading_div {
+  height: max-content;
+  width: 100%;
+}
+
+.heading-span {
+  color: aqua;
+}
+
+.home_heading_title {
+  position: relative;
+  /* position: absolute; */
+  padding: 20px;
+  height: max-content;
+  color: #fff;
+  line-height: 110%;
+  font-weight: 800;
+}
+
+.home_skills {
+  padding: 15px;
+}
+
+
+.copyrights {
+  background-image: linear-gradient(180deg, transparent, transparent), linear-gradient(90deg, #5221e6, #8d21e6);
+}
+
+.profilecard {
+  /* width : max-content; */
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  flex-wrap: wrap;
+  /* box-shadow: 0 4px 8px 4px rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19); */
+  /* border: 1px solid #dd7732; */
+}
+
+.profilecard_img {
+  /* height: 400px; */
+  /* width: auto; */
+  object-fit: cover;
+  /* overflow: clip; */
+  /* width: 600px; */
+  height: auto;
+  max-width: 100%;
+}
+
+.profilestat_img {
+  /* height: 400px; */
+  /* width: auto; */
+  object-fit: scale-down;
+  /* overflow: clip; */
+  /* width: 600px; */
+  height: auto;
+  max-width: 100%;
+}
+
+.cdf_stat_img_bg {
+  background-color: #ffffff;
+}
+
+.gfg_stat_img_bg {
+  background-color: #292a2b;
+}
+
+.gthb_stat_img_bg {
+  background-color: #282828;
+}
+
+.ltcd_stat_img_bg {
+  background-color: #101010;
+}
+
+.glowing-border {
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+blockquote.q-card-color-2 {
+  --accent-color: rgb(243 243 243);
+  --bg-color: #000;
+  --dot-color: rgb(255 255 255 / .125);
+  --text-color: rgb(243 243 243);
+  --text-color-author: rgb(33 29 30);
+}
+
+blockquote.q-card {
+  --padding: 1rem;
+  padding: var(--padding);
+  color: var(--text-color, black);
+  font-weight: 600;
+  background-color: var(--bg-color, white);
+  display: grid;
+  gap: 1rem;
+  background-image: radial-gradient(circle, var(--dot-color, rgb(0 0 0 / .125)) calc(25% - 1px), transparent 25%);
+  background-size: 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgb(0 0 0 / .5)
+}
+
+blockquote.q-card::before {
+  --qHeight: 4rem;
+  content: "";
+  margin-left: calc(var(--padding) * -1);
+  margin-top: calc(var(--padding) * -1);
+  height: var(--qHeight);
+  width: calc(var(--qHeight) * 1.1);
+  background-image:
+    radial-gradient(circle at bottom right,
+      transparent calc(var(--qHeight) / 4 - 1px),
+      var(--accent-color, black) calc(var(--qHeight) / 4) calc(var(--qHeight) / 2),
+      transparent calc(var(--qHeight) / 2 + 1px)),
+    linear-gradient(var(--accent-color, black), var(--accent-color, black));
+  background-size: calc(var(--qHeight) / 2) calc(var(--qHeight) / 2);
+  background-position: top left, bottom left;
+  background-repeat: space no-repeat
+}
+
+blockquote.q-card>.author {
+  color: var(--text-color-author, white);
+  /* background-color: var(--accent-color, black); */
+  justify-self: end;
+  font-size: 0.75em;
+  padding: 0.5em 1em;
+  border-radius: 0.25rem;
+}
+
+blockquote.q-card>.author::before {
+  content: "- "
+}

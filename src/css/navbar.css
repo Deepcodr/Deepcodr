@@ -1,0 +1,16 @@
+.navbar {
+    position: relative;
+    z-index: 1;
+    font-family: 'Sen', sans-serif;
+    background: rgba(88, 88, 88, 0.1);
+    backdrop-filter: blur(40px);
+    font-size: medium;
+}
+
+.nav-item {
+    padding: 5px;
+}
+
+.nav-link:hover {
+    color: #dd7732;
+}
